@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // import scene management
 
 public class PlayerLife : MonoBehaviour
 {
@@ -18,6 +18,7 @@ public class PlayerLife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // compare tag to differentiate it from other collision
         if (collision.gameObject.CompareTag("Trap"))
         {
             deathSoundEffect.Play();
@@ -28,7 +29,7 @@ public class PlayerLife : MonoBehaviour
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;
-        anim.SetTrigger("death");
+        anim.SetTrigger("death"); // execute the trigger
     }
 
     private void RestartLevel()

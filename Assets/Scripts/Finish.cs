@@ -10,7 +10,7 @@ public class Finish : MonoBehaviour
     private bool levelCompleted = false;
     private void Start()
     {
-        finishSound = GetComponent<AudioSource>();
+        finishSound = GetComponent<AudioSource>(); // use get component as there's only one sound, death
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +25,6 @@ public class Finish : MonoBehaviour
 
     private void CompleteLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // change scene or next level by the index
     }
 }

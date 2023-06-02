@@ -9,6 +9,7 @@ public class StickyPlatform : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            // player as a child of the moving platform
             collision.gameObject.transform.SetParent(transform);
         }
     }
@@ -17,6 +18,7 @@ public class StickyPlatform : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            // to remove the parent, set to null
             collision.gameObject.transform.SetParent(null);
         }
     }

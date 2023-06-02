@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// to handle rotation of the trap
+// to handle rotation (trap, moving platform rotating wheel)
 public class Rotate : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
