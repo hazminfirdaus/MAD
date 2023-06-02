@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // private - only this script can interact or make changes to the codes
     private Rigidbody2D rb;
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Stuff that happens each frame
     private void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
